@@ -1,33 +1,5 @@
 <!DOCTYPE html>
 <html lang="en" >
-	<style>
-    #overlay {
-      display: none;
-      position: fixed;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      background-color: rgba(0, 0, 0, 0.5);
-    }
-
-    #popup {
-      display: none;
-      position: fixed;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%);
-      width: 80vw;
-      height: 90vh;
-      background-color: white;
-      z-index: 1;
-    }
-
-    #popup-iframe {
-      width: 100%;
-      height: 100%;
-    }
-  </style>
 <head>
   <meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
@@ -459,10 +431,6 @@
     </section>
     <section id="contact">
         <div class="contact container">
-        <div class="map">
-            <iframe src="https://www.google.com/maps/embed?pb=!1m12!1m8!1m3!1d259.5499308383827!2d77.1981669533729!3d8.380522110663243!3m2!1i1024!2i768!4f13.1!2m1!1s95JX%2B573%20Cheriyakolla%20-%20Melpuram%20Rd%20Melpala%20Edaicode%2C%20Tamil%20Nadu%20629152!5e1!3m2!1sen!2sin!4v1681212421094!5m2!1sen!2sin"
-                width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-        </div>
             <div class="form">
                 <div class="form-txt">
                     <h4>INFORMATION</h4>
@@ -479,11 +447,7 @@
                 </div>
                 <div class="form-details">
 					<p>Fill this google forms and we'll get back to you soon.</p>
-                    <button id="popup-button">Go to Google Forms</button>
-					<div id="overlay"></div>
-					<div id="popup">
-					  <iframe src="https://forms.gle/j6w5RVGSnsiTX6oy7" id="popup-iframe"></iframe>
-					</div>
+                    <button><a href="https://forms.gle/j6w5RVGSnsiTX6oy7" style="text-decoration: none; color: white">Go to Google Forms</a></button>
                 </div>
             </div>
     </div>
@@ -497,21 +461,6 @@
 </body>
 <!-- partial -->
   <script  src="./script.js"></script>
-	<script>
-      const button = document.getElementById("popup-button");
-      const overlay = document.getElementById("overlay");
-      const popup = document.getElementById("popup");
-
-      button.addEventListener("click", function () {
-        overlay.style.display = "block";
-        popup.style.display = "block";
-      });
-
-      overlay.addEventListener("click", function () {
-        overlay.style.display = "none";
-        popup.style.display = "none";
-      });
-    </script>
 
 </body>
 </html>
